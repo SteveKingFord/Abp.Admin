@@ -28,6 +28,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\modules\WeChatMiniProgram\WeChatMiniProgram.Application\WeChatMiniProgram.Application.csproj" />
+    <ProjectReference Include="..\..\modules\WeChatMiniProgram\WeChatMiniProgram.EntityFrameworkCore\WeChatMiniProgram.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\modules\WeChatMiniProgram\WeChatMiniProgram.HttpApi\WeChatMiniProgram.HttpApi.csproj" />
     <ProjectReference Include="..\..\src\Abp.Admin.HttpApi\Abp.Admin.HttpApi.csproj" />
     <ProjectReference Include="..\..\src\Abp.Admin.Application\Abp.Admin.Application.csproj" />
     <ProjectReference Include="..\..\src\Abp.Admin.EntityFrameworkCore\Abp.Admin.EntityFrameworkCore.csproj" />

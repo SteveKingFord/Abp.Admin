@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp;
+using Volo.Abp.EntityFrameworkCore.Modeling;
+using WeChatMiniProgram.Users;
 
 namespace WeChatMiniProgram.EntityFrameworkCore
 {
@@ -38,6 +40,14 @@ namespace WeChatMiniProgram.EntityFrameworkCore
                 b.HasIndex(q => q.CreationTime);
             });
             */
+            builder.Entity<User>(b =>
+            {
+                //Configure table & schema name
+                b.ToTable(options.TablePrefix + "Users", options.Schema);
+
+                b.ConfigureByConvention();
+
+            });
         }
     }
 }

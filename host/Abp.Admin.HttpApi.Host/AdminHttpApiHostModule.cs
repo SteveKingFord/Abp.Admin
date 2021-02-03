@@ -29,6 +29,8 @@ using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.Swashbuckle;
 using Volo.Abp.VirtualFileSystem;
+using WeChatMiniProgram;
+using WeChatMiniProgram.EntityFrameworkCore;
 
 namespace Abp.Admin
 {
@@ -39,8 +41,10 @@ namespace Abp.Admin
         typeof(AdminHttpApiModule),
     #endregion
 
-    #region Wechat
-     
+    #region WeChatMiniProgram
+     typeof(WeChatMiniProgramApplicationModule),
+     typeof(WeChatMiniProgramEntityFrameworkCoreModule),
+     typeof(WeChatMiniProgramHttpApiModule),
     #endregion
 
     #region Abp

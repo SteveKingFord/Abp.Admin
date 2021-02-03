@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore;
-
+using WeChatMiniProgram.EntityFrameworkCore;
 
 
 namespace Abp.Admin.EntityFrameworkCore
@@ -18,6 +18,7 @@ namespace Abp.Admin.EntityFrameworkCore
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.ConfigureAdmin();
+            modelBuilder.ConfigureWeChatMiniProgram();
          
         }
     }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
+using WeChatMiniProgram.Users;
 
 namespace WeChatMiniProgram.EntityFrameworkCore
 {
@@ -11,7 +12,10 @@ namespace WeChatMiniProgram.EntityFrameworkCore
          * public DbSet<Question> Questions { get; set; }
          */
 
-        public WeChatMiniProgramDbContext(DbContextOptions<WeChatMiniProgramDbContext> options) 
+        public DbSet<User> Users { get; set; }
+
+
+        public WeChatMiniProgramDbContext(DbContextOptions<WeChatMiniProgramDbContext> options)
             : base(options)
         {
 

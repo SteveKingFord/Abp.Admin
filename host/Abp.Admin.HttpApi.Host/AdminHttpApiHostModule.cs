@@ -25,9 +25,7 @@ using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore.SqlServer;
 using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
-using Volo.Abp.MultiTenancy;
 using Volo.Abp.PermissionManagement.EntityFrameworkCore;
-using Volo.Abp.Security.Claims;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.Swashbuckle;
 using Volo.Abp.VirtualFileSystem;
@@ -35,9 +33,17 @@ using Volo.Abp.VirtualFileSystem;
 namespace Abp.Admin
 {
     [DependsOn(
+    #region Admin
         typeof(AdminApplicationModule),
         typeof(AdminEntityFrameworkCoreModule),
         typeof(AdminHttpApiModule),
+    #endregion
+
+    #region Wechat
+     
+    #endregion
+
+    #region Abp
         typeof(AbpAspNetCoreMvcUiMultiTenancyModule),
         typeof(AbpAutofacModule),
         typeof(AbpCachingStackExchangeRedisModule),
@@ -47,6 +53,7 @@ namespace Abp.Admin
         typeof(AbpSettingManagementEntityFrameworkCoreModule),
         typeof(AbpAspNetCoreSerilogModule),
         typeof(AbpSwashbuckleModule)
+    #endregion
         )]
     public class AdminHttpApiHostModule : AbpModule
     {

@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore;
 
+
+
 namespace Abp.Admin.EntityFrameworkCore
 {
     public class AdminHttpApiHostMigrationsDbContext : AbpDbContext<AdminHttpApiHostMigrationsDbContext>
@@ -16,6 +18,7 @@ namespace Abp.Admin.EntityFrameworkCore
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.ConfigureAdmin();
+         
         }
     }
 }

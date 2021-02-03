@@ -31,7 +31,6 @@
     <ProjectReference Include="..\..\src\Abp.Admin.HttpApi\Abp.Admin.HttpApi.csproj" />
     <ProjectReference Include="..\..\src\Abp.Admin.Application\Abp.Admin.Application.csproj" />
     <ProjectReference Include="..\..\src\Abp.Admin.EntityFrameworkCore\Abp.Admin.EntityFrameworkCore.csproj" />
-    <ProjectReference Include="..\Abp.Admin.Host.Shared\Abp.Admin.Host.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>

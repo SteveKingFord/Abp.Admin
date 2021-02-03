@@ -11,7 +11,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Abp.Admin.EntityFrameworkCore;
-using Abp.Admin.MultiTenancy;
 using StackExchange.Redis;
 using Microsoft.OpenApi.Models;
 using Volo.Abp;
@@ -63,10 +62,6 @@ namespace Abp.Admin
                 options.UseSqlServer();
             });
 
-            Configure<AbpMultiTenancyOptions>(options =>
-            {
-                options.IsEnabled = MultiTenancyConsts.IsEnabled;
-            });
 
             if (hostingEnvironment.IsDevelopment())
             {
@@ -168,10 +163,7 @@ namespace Abp.Admin
             app.UseRouting();
             app.UseCors(DefaultCorsPolicyName);
             app.UseAuthentication();
-            if (MultiTenancyConsts.IsEnabled)
-            {
-                app.UseMultiTenancy();
-            }
+          
             app.UseAbpRequestLocalization();
             app.UseAuthorization();
             app.UseSwagger();

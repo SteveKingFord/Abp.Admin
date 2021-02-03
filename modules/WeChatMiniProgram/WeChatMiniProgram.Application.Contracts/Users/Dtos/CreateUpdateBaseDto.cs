@@ -4,10 +4,9 @@ using Volo.Abp.Validation;
 
 namespace WeChatMiniProgram.Users.Dtos
 {
-    public class CreateUpdateProprietorBaseDto
+    public class CreateUpdateBaseDto
     {
-        [Required]
-        [DynamicStringLength(typeof(UserConsts), nameof(UserConsts.MaxNameLength))]
         public string NickName { get; set; }
+        public GenderType Gender { get; set; }
     }
 }

@@ -5,8 +5,9 @@ namespace WeChatMiniProgram.Users.Dtos
 {
     public class UserDto : FullAuditedEntityDto<Guid>
     {
-        public Guid UId { get; set; }
+        public Guid UserId { get; set; }
+        public string OpenId { get; set; }
         public string NickName { get; set; }
-        public GenderType Gender { get; set; }         
+        public GenderType Gender { get; set; }
     }
 }

@@ -6,15 +6,14 @@ using System.Text;
 namespace WeChatMiniProgram.Users.Dtos
 {
     [Serializable]
-    public class CreateUserDto
+    public class CreateUserDto: CreateUpdateBaseDto
     {
         /// <summary>
         /// OpenId
         /// </summary>
         [Required]
         public string OpenId { get; set; }
-        public Guid? UId { get; set; }
-        public string NickName { get; set; }
-        public GenderType Gender { get; set; }
+        public Guid? UserId { get; set; }
+     
     }
 }

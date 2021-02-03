@@ -5,9 +5,8 @@ using System.Text;
 namespace WeChatMiniProgram.Users.Dtos
 {
     [Serializable]
-    public class UpdateUserDto
+    public class UpdateUserDto : CreateUpdateBaseDto
     {
-        public string NickName { get; set; }
-        public GenderType Gender { get; set; }
+
     }
 }

@@ -11,8 +11,8 @@ using Volo.Abp.EntityFrameworkCore;
 namespace Abp.Admin.Migrations
 {
     [DbContext(typeof(AdminHttpApiHostMigrationsDbContext))]
-    [Migration("20210203062509_crate_wechat")]
-    partial class crate_wechat
+    [Migration("20210204055532_create_wechat_module")]
+    partial class create_wechat_module
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -78,7 +78,7 @@ namespace Abp.Admin.Migrations
                     b.Property<string>("OpenId")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("UId")
+                    b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");

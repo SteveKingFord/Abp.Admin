@@ -41,7 +41,7 @@ namespace WeChatMiniProgram.MiniPrograms
         }
 
         [HttpGet]
-        public Task<PagedResultDto<UserDto>> GetListAsync(GetListUserInput input)
+        public virtual Task<PagedResultDto<UserDto>> GetListAsync(GetListUserInput input)
         {
             return _service.GetListAsync(input);
         }

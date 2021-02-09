@@ -76,7 +76,7 @@ namespace Abp.Admin.Migrations
                     b.Property<string>("OpenId")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("UId")
+                    b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");

@@ -1,6 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
-
-  <Import Project="..\..\common.props" />
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -28,9 +26,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\modules\WeChatMiniProgram\WeChatMiniProgram.Application\WeChatMiniProgram.Application.csproj" />
-    <ProjectReference Include="..\..\modules\WeChatMiniProgram\WeChatMiniProgram.EntityFrameworkCore\WeChatMiniProgram.EntityFrameworkCore.csproj" />
-    <ProjectReference Include="..\..\modules\WeChatMiniProgram\WeChatMiniProgram.HttpApi\WeChatMiniProgram.HttpApi.csproj" />
+    <ProjectReference Include="..\..\modules\WeChatMiniProgram\src\WeChatMiniProgram.Application\WeChatMiniProgram.Application.csproj" />
+    <ProjectReference Include="..\..\modules\WeChatMiniProgram\src\WeChatMiniProgram.EntityFrameworkCore\WeChatMiniProgram.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\modules\WeChatMiniProgram\src\WeChatMiniProgram.HttpApi\WeChatMiniProgram.HttpApi.csproj" />
+    <ProjectReference Include="..\..\modules\WeChatOfficialAccount\src\WeChatOfficialAccount.Application\WeChatOfficialAccount.Application.csproj" />
+    <ProjectReference Include="..\..\modules\WeChatOfficialAccount\src\WeChatOfficialAccount.EntityFrameworkCore\WeChatOfficialAccount.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\modules\WeChatOfficialAccount\src\WeChatOfficialAccount.HttpApi\WeChatOfficialAccount.HttpApi.csproj" />
     <ProjectReference Include="..\..\src\Abp.Admin.HttpApi\Abp.Admin.HttpApi.csproj" />
     <ProjectReference Include="..\..\src\Abp.Admin.Application\Abp.Admin.Application.csproj" />
     <ProjectReference Include="..\..\src\Abp.Admin.EntityFrameworkCore\Abp.Admin.EntityFrameworkCore.csproj" />

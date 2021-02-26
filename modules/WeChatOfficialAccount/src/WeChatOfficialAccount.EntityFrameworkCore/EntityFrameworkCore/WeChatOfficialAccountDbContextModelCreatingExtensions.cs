@@ -2,7 +2,7 @@
 using System;
 using Volo.Abp;
 using Volo.Abp.EntityFrameworkCore.Modeling;
-using WeChatOfficialAccount.MpAccessTokens;
+using WeChatOfficialAccount.OAuthAccessTokens;
 
 namespace WeChatOfficialAccount.EntityFrameworkCore
 {
@@ -41,7 +41,7 @@ namespace WeChatOfficialAccount.EntityFrameworkCore
             });
             */
 
-            builder.Entity<MpAccessToken>(b =>
+            builder.Entity<OAuthAccessToken>(b =>
             {
                 //Configure table & schema name
                 b.ToTable(options.TablePrefix + "MpAccessTokens", options.Schema);
@@ -49,8 +49,8 @@ namespace WeChatOfficialAccount.EntityFrameworkCore
 
                 //Properties
                 b.Property(q => q.AccessToken).IsRequired().HasComment("公众号授权token");
-                b.Property(q => q.AppId).IsRequired().HasMaxLength(MpAccessTokenConsts.MaxAppIdLength).HasComment("公众号AppId");
-                b.Property(q => q.Secret).IsRequired().HasMaxLength(MpAccessTokenConsts.MaxSecretLength).HasComment("公众号Secret");
+                b.Property(q => q.AppId).IsRequired().HasMaxLength(OAuthAccessTokenConsts.MaxAppIdLength).HasComment("公众号AppId");
+                b.Property(q => q.Secret).IsRequired().HasMaxLength(OAuthAccessTokenConsts.MaxSecretLength).HasComment("公众号Secret");
 
             });
         }

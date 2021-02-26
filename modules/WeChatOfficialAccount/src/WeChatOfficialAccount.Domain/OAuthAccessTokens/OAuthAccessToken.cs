@@ -3,19 +3,13 @@ using System;
 using Volo.Abp.Domain.Entities.Auditing;
 
 
-namespace WeChatOfficialAccount.MpAccessTokens
+namespace WeChatOfficialAccount.OAuthAccessTokens
 {
     /// <summary>
-    ///  授权实体
+    ///  公众号授权
     /// </summary>
-    public class MpAccessToken : FullAuditedAggregateRoot<Guid>
+    public class OAuthAccessToken : FullAuditedAggregateRoot<Guid>
     {
-        /// <summary>
-        /// 公众号授权Token
-        /// </summary>
-        [NotNull]
-        public string AccessToken { get; protected set; }
-
         /// <summary>
         /// 公众号AppId
         /// </summary>
@@ -28,12 +22,24 @@ namespace WeChatOfficialAccount.MpAccessTokens
         [NotNull]
         public string Secret { get; protected set; }
 
-        protected MpAccessToken()
+        /// <summary>
+        /// 公众号Token
+        /// </summary>
+        [NotNull]
+        public string AccessToken { get; set; }
+
+        /// <summary>
+        ///  Token生效时间，秒
+        /// </summary>
+        public int ExpiresIn { get; set; }
+
+
+        protected OAuthAccessToken()
         {
 
         }
 
-        public MpAccessToken(Guid id, string accessToken, string appId, string secret) : base(id)
+        public OAuthAccessToken(Guid id, string accessToken, string appId, string secret) : base(id)
         {
             AccessToken = accessToken;
             AppId = appId;

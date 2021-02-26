@@ -59,8 +59,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeChatOfficialAccount.Entit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeChatOfficialAccount.HttpApi", "modules\WeChatOfficialAccount\src\WeChatOfficialAccount.HttpApi\WeChatOfficialAccount.HttpApi.csproj", "{41B327A7-4937-4005-BBAB-EB41CB8183EF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeChatOfficialAccount.HttpApi.Client", "modules\WeChatOfficialAccount\src\WeChatOfficialAccount.HttpApi.Client\WeChatOfficialAccount.HttpApi.Client.csproj", "{41AEEA5A-242C-4DDF-841E-F7638870EC33}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,10 +157,6 @@ Global
 		{41B327A7-4937-4005-BBAB-EB41CB8183EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41B327A7-4937-4005-BBAB-EB41CB8183EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41B327A7-4937-4005-BBAB-EB41CB8183EF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{41AEEA5A-242C-4DDF-841E-F7638870EC33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{41AEEA5A-242C-4DDF-841E-F7638870EC33}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{41AEEA5A-242C-4DDF-841E-F7638870EC33}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{41AEEA5A-242C-4DDF-841E-F7638870EC33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -193,7 +187,6 @@ Global
 		{C2292391-69F1-496F-B73D-4D1BD8C40FCF} = {923FE320-D95B-4AA3-B584-F718E4E7CFE5}
 		{1FC78AFA-2CE1-4EBD-BA31-E75318E4D88C} = {923FE320-D95B-4AA3-B584-F718E4E7CFE5}
 		{41B327A7-4937-4005-BBAB-EB41CB8183EF} = {923FE320-D95B-4AA3-B584-F718E4E7CFE5}
-		{41AEEA5A-242C-4DDF-841E-F7638870EC33} = {923FE320-D95B-4AA3-B584-F718E4E7CFE5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4324B3B4-B60B-4E3C-91D8-59576B4E26DD}

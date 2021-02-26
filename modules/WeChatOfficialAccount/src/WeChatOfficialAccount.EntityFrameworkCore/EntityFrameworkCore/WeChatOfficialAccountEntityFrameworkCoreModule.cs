@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.Modularity;
-using WeChatOfficialAccount.MpAccessTokens;
+using WeChatOfficialAccount.OAuthAccessTokens;
 
 namespace WeChatOfficialAccount.EntityFrameworkCore
 {
@@ -19,7 +19,7 @@ namespace WeChatOfficialAccount.EntityFrameworkCore
                  * options.AddRepository<Question, EfCoreQuestionRepository>();
                  */
 
-                options.AddRepository<MpAccessToken, MpAccessTokenRepository>();
+                options.AddRepository<OAuthAccessToken, OAuthAccessTokenRepository>();
             });
         }
     }

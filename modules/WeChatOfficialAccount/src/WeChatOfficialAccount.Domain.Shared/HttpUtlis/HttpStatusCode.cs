@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace WeChatOfficialAccount.HttpStatusCodes
+namespace WeChatOfficialAccount.HttpUtlis
 {
-    class HttpStatusCode
+    public class HttpStatusCode
     {
         string GetStatusMsg(int code)
         {
-           //https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Global_Return_Code.html
+            //https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Global_Return_Code.html
 
 
             var statusMap = new Dictionary<int, string>()  {

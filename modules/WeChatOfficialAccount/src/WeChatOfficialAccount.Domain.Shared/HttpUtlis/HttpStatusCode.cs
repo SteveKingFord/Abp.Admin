@@ -4,7 +4,7 @@ namespace WeChatOfficialAccount.HttpUtlis
 {
     public class HttpStatusCode
     {
-        string GetStatusMsg(int code)
+        public string GetStatusMsg(int code)
         {
             //https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Global_Return_Code.html
 

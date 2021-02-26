@@ -44,7 +44,7 @@ namespace WeChatOfficialAccount.EntityFrameworkCore
             builder.Entity<OAuthAccessToken>(b =>
             {
                 //Configure table & schema name
-                b.ToTable(options.TablePrefix + "MpAccessTokens", options.Schema);
+                b.ToTable(options.TablePrefix + "AccessTokens", options.Schema);
                 b.ConfigureByConvention();
 
                 //Properties

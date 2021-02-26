@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Volo.Abp;
 using WeChatOfficialAccount.OAuthAccessTokens;
 using WeChatOfficialAccount.OAuthAccessTokens.dto;
 
@@ -32,8 +33,7 @@ namespace WeChatOfficialAccount.MpAccessTokens
             // 发起授权请求
             var response = await HttpClient.GetAsync("https://www.baidu.com/");
 
-
-
+            Console.WriteLine(response.Content);
 
             if (response.IsSuccessStatusCode)
             {
@@ -58,7 +58,8 @@ namespace WeChatOfficialAccount.MpAccessTokens
 
             }
 
-            throw new System.NotImplementedException();
+            throw new BusinessException("授权请求失败");
+
         }
 
 

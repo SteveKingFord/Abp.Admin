@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
+using WeChatOfficialAccount.MpAccessTokens;
+
 
 namespace WeChatOfficialAccount.EntityFrameworkCore
 {
@@ -11,7 +13,9 @@ namespace WeChatOfficialAccount.EntityFrameworkCore
          * public DbSet<Question> Questions { get; set; }
          */
 
-        public WeChatOfficialAccountDbContext(DbContextOptions<WeChatOfficialAccountDbContext> options) 
+        public DbSet<MpAccessToken> MpAccessTokens { get; set; }
+
+        public WeChatOfficialAccountDbContext(DbContextOptions<WeChatOfficialAccountDbContext> options)
             : base(options)
         {
 
